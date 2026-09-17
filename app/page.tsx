@@ -24,8 +24,9 @@ export default function Home() {
     <main>
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[#ded8cc] bg-[#faf7f0]/95 backdrop-blur-xl">
         <div className="container-x flex h-16 items-center justify-between">
-          <a href="#top" className="font-display font-semibold tracking-tight text-[#16130f]">
-            letyar<span className="text-[#b23a22]">.</span>
+          <a href="#top" className="flex items-center gap-2 font-display font-semibold tracking-tight text-[#16130f]" aria-label="Letyar Labs home">
+            <img src="/mark.svg" alt="Letyar" className="h-8 w-8 shrink-0" />
+            <span>letyar<span className="text-[#b23a22]">.</span></span>
           </a>
           <nav className="hidden gap-7 text-sm text-[#7a736a] md:flex">
             <a href="#services" className="transition hover:text-[#b23a22]">Services</a>
