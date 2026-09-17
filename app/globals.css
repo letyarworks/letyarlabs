@@ -4,8 +4,10 @@
   --navy: #0f172a;
   --navy-2: #172033;
   --cyan: #0891b2;
+  --cyan-bright: #06b6d4;
   --cyan-soft: #ecfeff;
   --gold: #d49a18;
+  --gold-bright: #f5b942;
   --gold-soft: #fff8e7;
   --ink: #0f172a;
   --muted: #64748b;
@@ -33,7 +35,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 .glow {
-  background: radial-gradient(circle at 50% 0%, rgba(8, 145, 178, .10), transparent 48%);
+  background:
+    radial-gradient(circle at 78% 12%, rgba(8, 145, 178, .10), transparent 30%),
+    radial-gradient(circle at 18% 80%, rgba(212, 154, 24, .07), transparent 28%);
 }
 
 .card {
