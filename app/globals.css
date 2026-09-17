@@ -1,53 +1,101 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #0f172a;
-  --navy-2: #172033;
-  --cyan: #0891b2;
-  --cyan-bright: #06b6d4;
-  --cyan-soft: #ecfeff;
-  --gold: #d49a18;
-  --gold-bright: #f5b942;
-  --gold-soft: #fff8e7;
-  --ink: #0f172a;
-  --muted: #64748b;
-  --line: #e2e8f0;
-  --surface: #ffffff;
-  --surface-2: #f8fafc;
+  --ink: #16130f;
+  --lacquer: #b23a22;
+  --gold: #d9a441;
+  --cream: #f5f0e6;
+  --paper: #faf7f0;
+  --muted: #7a736a;
+  --line: #ded8cc;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: var(--surface);
+  background: var(--paper);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Satoshi", Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
 }
-a { color: inherit; text-decoration: none; }
-::selection { background: rgba(8, 145, 178, 0.18); }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(178, 58, 34, 0.16);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: "General Sans", Arial, Helvetica, sans-serif;
+}
+
+code,
+pre,
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
 
 .grid-bg {
   background-image:
-    linear-gradient(rgba(15, 23, 42, .045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, .045) 1px, transparent 1px);
+    linear-gradient(rgba(22, 19, 15, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 19, 15, 0.035) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
 .glow {
   background:
-    radial-gradient(circle at 78% 12%, rgba(8, 145, 178, .10), transparent 30%),
-    radial-gradient(circle at 18% 80%, rgba(212, 154, 24, .07), transparent 28%);
+    radial-gradient(circle at 78% 12%, rgba(178, 58, 34, 0.07), transparent 30%),
+    radial-gradient(circle at 18% 80%, rgba(217, 164, 65, 0.07), transparent 28%);
 }
 
 .card {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, .92);
-  box-shadow: 0 14px 40px rgba(15, 23, 42, .055);
+  background: rgba(245, 240, 230, 0.82);
+  box-shadow: 0 14px 40px rgba(22, 19, 15, 0.045);
 }
 
-.container-x { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+.container-x {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
 
 @media (max-width: 640px) {
-  .container-x { width: min(100% - 28px, 1120px); }
+  .container-x {
+    width: min(100% - 28px, 1120px);
+  }
+}
+
+.text-lacquer {
+  color: var(--lacquer);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.bg-paper {
+  background: var(--paper);
+}
+
+.bg-cream {
+  background: var(--cream);
+}
+
+.border-brand {
+  border-color: var(--line);
 }
