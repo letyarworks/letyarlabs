@@ -46,9 +46,38 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://letyarlabs.com/#organization",
+      name: "Letyar Labs",
+      url: "https://letyarlabs.com/",
+      description: "Web Software & Product Engineering from Myanmar.",
+      slogan: "Every build carries a fingerprint.",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://letyarlabs.com/#website",
+      url: "https://letyarlabs.com/",
+      name: "Letyar Labs",
+      publisher: {
+        "@id": "https://letyarlabs.com/#organization",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
