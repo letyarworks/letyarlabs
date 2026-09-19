@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -36,11 +36,21 @@ export default function MobileMenu() {
         <div id="mobile-navigation" className="absolute inset-x-0 top-16 border-b border-[#ded8cc] bg-[#faf7f0]">
           <nav className="container-x flex flex-col py-4" aria-label="Mobile navigation">
             {links.map(([label, href]) => (
-              <a key={href} href={href} onClick={() => setOpen(false)} className="border-b border-[#ded8cc] py-4 text-base font-medium last:border-b-0 hover:text-[#b23a22]">
+              <a
+                key={href}
+                href={href}
+                onClick={() => setOpen(false)}
+                className="border-b border-[#ded8cc] py-4 text-base font-medium last:border-b-0 hover:text-[#b23a22]"
+              >
                 {label}
               </a>
             ))}
-            <a href="/contact" onClick={() => setOpen(false)} className="mt-4 inline-flex w-fit rounded-full bg-[#b23a22] px-5 py-3 text-sm font-semibold text-white">
+
+            <a
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-4 inline-flex w-fit rounded-full bg-[#b23a22] px-5 py-3 text-sm font-semibold text-white"
+            >
               Start a project
             </a>
           </nav>
